@@ -1,5 +1,4 @@
 use halo2_proofs::circuit::{Region, Value};
-//use halo2_proofs::halo2curves::bn256::Fr as F;
 use halo2_proofs::plonk::{ConstraintSystem, Error};
 
 use super::control::ControlChip;
@@ -121,7 +120,7 @@ impl SeptidonChip {
         self.assign_permutation_with_offset(region, initial_state, 0)
     }
 
-    /// Assign the witness of a permutation into the existent region.
+    /// Assign the witness of a permutation into the existing region.
     pub fn assign_permutation_with_offset<F: CachedConstants>(
         &self,
         region: &mut Region<'_, F>,
